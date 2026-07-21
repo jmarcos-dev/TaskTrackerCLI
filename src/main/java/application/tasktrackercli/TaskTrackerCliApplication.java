@@ -1,13 +1,21 @@
 package application.tasktrackercli;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.core.type.TypeReference;
 
-@SpringBootApplication
+import java.io.InputStream;
+
 public class TaskTrackerCliApplication {
+    public static void main(String[] args) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        InputStream is = TaskTrackerCliApplication.class
+                .getClassLoader()
+                .getResourceAsStream("info.json");
+        Info info = mapper.readValue(is, Info.class);
 
-    public static void main(String[] args) {
-        SpringApplication.run(TaskTrackerCliApplication.class, args);
+        System.out.println(info.getAppName());
+        System.out.println(info.getVersion());
+        System.out.println(info.getAuthor());
+
     }
-
 }
