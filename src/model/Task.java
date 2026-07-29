@@ -1,17 +1,23 @@
 package model;
 
+import java.time.LocalDateTime;
+
 public class Task {
 
     private String taskName;
     private String taskDescription;
     private int taskId;
     private Status taskStatus;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
-    Task(String taskName, int taskId, String taskDescription) {
+    public Task(String taskName, int taskId, String taskDescription) {
         setTaskName(taskName);
         this.taskId = taskId;
         setTaskDescription(taskDescription);
         this.taskStatus = Status.TODO;
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     public int getTaskId() {
@@ -28,6 +34,7 @@ public class Task {
 
     public void setTaskDescription(String taskDescription) {
         this.taskDescription = (taskDescription == null) ? "" : taskDescription.trim();
+        this.updatedAt = LocalDateTime.now();
     }
 
     public String getTaskDescription() {
@@ -36,6 +43,7 @@ public class Task {
 
     public void setTaskStatus(Status taskStatus) {
         this.taskStatus = taskStatus;
+        this.updatedAt = LocalDateTime.now();
     }
 
     public Status getTaskStatus() {
@@ -44,8 +52,7 @@ public class Task {
 
     //anotação, avisa o compilador que está reescrevendo um médoto que já existe na classe mãe.
     @Override
-    public String toString()
-    {
-        return "[" + taskId + "] " + taskName + "( " + taskStatus + " ) - " +  taskDescription;
+    public String toString() {
+        return "[" + taskId + "] " + taskName + "( " + taskStatus + " ) - " + taskDescription + "\n" + "Created at: " + createdAt + "\n" + "Updated at: " + updatedAt;
     }
 }

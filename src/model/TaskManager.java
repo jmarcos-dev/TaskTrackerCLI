@@ -18,6 +18,8 @@ public class TaskManager {
         return tarefa;
     }
 
-    //public Task
+    public List<Task> listarTarefa() {
+        return new ArrayList<>(taskList);
+    }
 }
 
