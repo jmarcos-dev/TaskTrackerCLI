@@ -42,4 +42,10 @@ public class Task {
         return taskStatus;
     }
 
+    //anotação, avisa o compilador que está reescrevendo um médoto que já existe na classe mãe.
+    @Override
+    public String toString()
+    {
+        return "[" + taskId + "] " + taskName + "( " + taskStatus + " ) - " +  taskDescription;
+    }
 }
