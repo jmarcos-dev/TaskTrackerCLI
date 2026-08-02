@@ -18,6 +18,11 @@ public class TaskManager {
         return tarefa;
     }
 
+    public void removerTarefa(int taskNextId) {
+        taskList.removeIf(t -> t.getTaskId() == taskNextId);
+
+    }
+
     public List<Task> listarTarefa() {
         return new ArrayList<>(taskList);
     }
