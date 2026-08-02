@@ -10,9 +10,3 @@ Because a Task can only have three status:
 > This avoids writing mistakes.
 
 ---
-
-## Why doesn't a Task save JSON?
-
-Because Task represents data.
-
-The Repository is responsible for saving it.
