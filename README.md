@@ -19,3 +19,29 @@ It helped me practice and understand:
 - List 
 - Array 
 - Searches
+
+## Prerequisites
+
+- Java 17 or higher
+- Maven (or use the included Maven Wrapper)
+
+## How to run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jmarcos-dev/TaskTrackerCLI.git
+cd TaskTrackerCLI
+```
+
+Compile the project:
+
+```bash
+./mvnw compile
+```
+
+Run the application:
+
+```bash
+./mvnw exec:java -Dexec.mainClass="Main"
+```
