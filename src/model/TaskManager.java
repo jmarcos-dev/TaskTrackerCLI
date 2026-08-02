@@ -1,6 +1,7 @@
 package model;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class TaskManager {
     private int taskNextId;
@@ -28,7 +29,7 @@ public class TaskManager {
     }
 
 
-    public Task listarTarefaPorId(int taskNextId) {
+    public Task buscarTarefaPorId(int taskNextId) {
         for (Task t : taskList) {
             if (t.getTaskId() == taskNextId) {
                 return t;
@@ -37,6 +38,29 @@ public class TaskManager {
         }
         return null;
     }
+
+    public boolean alterarStatusTarefa(int id, Status novoStatus) {
+        Task t = buscarTarefaPorId(id);
+        if (t != null) {
+            t.setTaskStatus(novoStatus);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean alterarTarefa(int id, String newDescription) {
+        Task t = buscarTarefaPorId(id);
+        if (t != null) {
+            t.setTaskDescription(newDescription);
+            return true;
+        }
+        return false;
+    }
+
+    public List<Task> listarPorStatus(Status status) {
+        return taskList.stream().filter(t -> t.getTaskStatus() == status).collect((Collectors.toList()));
+    }
+
 }
 
 

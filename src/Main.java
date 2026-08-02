@@ -1,3 +1,4 @@
+import model.Status;
 import model.TaskManager;
 import model.Task;
 import cli.TaskCli;
@@ -13,10 +14,14 @@ public class Main {
 
         cli.mostrarTarefas();
 
-        manager.removerTarefa(1);
+
+        manager.buscarTarefaPorId(2);
+
+        manager.alterarStatusTarefa(1, Status.IN_PROGRESS);
+
+        manager.listarPorStatus(Status.IN_PROGRESS);
 
         cli.mostrarTarefas();
-
-        manager.listarTarefaPorId(2);
     }
+
 }
