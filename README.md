@@ -1,7 +1,4 @@
 # TaskTrackerCLI
-
-> 🚧 This project is currently under development.
-
 ---
 TaskTrackerCLI is a command-line application that helps you manage and keep track of your tasks.
 
@@ -12,9 +9,13 @@ TaskTrackerCLI is a command-line application that helps you manage and keep trac
 - List all tasks that are not done
 
 ## About
+This project was initially built to complete the Task Tracker CLI challenge from roadmap.sh, but as I got more involved, it grew into a side project focused on learning. 
 
-This repository will also include documentation explaning the project's design decisions, implementation, and my leaning process while building it.
-
-Contributions, suggestions, and feedback are always welcome.
-
----
+It helped me practice and understand:
+- Class 
+- Encapsulation 
+- Methods 
+- getters and setters 
+- List 
+- Array 
+- Searches
