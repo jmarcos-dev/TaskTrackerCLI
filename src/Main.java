@@ -16,5 +16,7 @@ public class Main {
         manager.removerTarefa(1);
 
         cli.mostrarTarefas();
+
+        manager.listarTarefaPorId(2);
     }
 }

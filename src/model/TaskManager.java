@@ -26,5 +26,17 @@ public class TaskManager {
     public List<Task> listarTarefa() {
         return new ArrayList<>(taskList);
     }
+
+
+    public Task listarTarefaPorId(int taskNextId) {
+        for (Task t : taskList) {
+            if (t.getTaskId() == taskNextId) {
+                return t;
+            }
+
+        }
+        return null;
+    }
 }
+
 
