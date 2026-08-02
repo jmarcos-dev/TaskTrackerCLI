@@ -17,11 +17,6 @@ Responsible for:
 - remove tasks
 - update tasks
 
-TaskRepository
-Responsible for:
-- save JSON
-- load JSON
-
 CLI
 Responsible for:
 - user interaction
