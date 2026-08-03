@@ -29,7 +29,7 @@ public class TaskCli {
 
         while (true) {
             System.out.println("|------------------------------|");
-            System.out.println("|          Welcom to           |");
+            System.out.println("|          Welcome to           |");
             System.out.println("|       Task Tracker CLI       |");
             System.out.println("|------------------------------|");
             System.out.println("|                              |");
